@@ -5,7 +5,7 @@ import { findImgByCat } from "@/app/lib/images";
 import { Article, ArticleCategory } from "@/app/types/article-type";
 import Image from "next/image";
 
-export const revalidate = 300;
+export const revalidate = 1000;
 
 // Static rendering
 export async function generateStaticParams() {
