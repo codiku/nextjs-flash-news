@@ -6,6 +6,7 @@ import { CryptoNews } from "../CryptoNews/CryptoNews.server";
 import { IssNews } from "../IssNews/IssNews";
 
 export async function MiniNews() {
+  console.log("CRYPTO MiniNews");
   return (
     <div>
       <h3 className="font-bold pb-10">
