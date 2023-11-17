@@ -22,6 +22,11 @@ export async function LatestNews() {
   );
 }
 const LatestNewsList = async () => {
-  let latestArticles: Article[] = await ArticleAPI.fetchToday();
+  let latestArticles: Article[] = [];
+  latestArticles = await ArticleAPI.fetchToday();
+
+  if (latestArticles.length === 0) {
+    return <div>No articles found</div>;
+  }
   return <ArticleList articles={latestArticles} />;
 };
