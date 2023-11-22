@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/app/components/ui/card";
+import { findImgByCat } from "@/app/lib/images";
 import defaultNews from "@/public/default-news.png";
 import topPng from "@/public/top.png";
 import Image from "next/image";
@@ -14,14 +15,22 @@ import Link from "next/link";
 
 export default async function ArticleDetail(p: { params: { title: string } }) {
   const article = await ArticleAPI.fetchByTitle(p.params.title);
-  const category = article.category[0];
+  const category = article?.category[0];
+
+  if (!category) {
+    return <div>Could not find the article</div>;
+  }
+
   return (
     <div className="flex justify-center">
       <Card className="max-w-7xl p-4">
         <CardHeader className="py-4 ">
           <CardTitle className="text-md capitalize flex items-center gap-2 ">
             <div className="flex justify-center items-center border border-slate-300 rounded-full w-10 h-10  ">
-              <Image alt={`Icon for ${category}`} src={topPng} />
+              <Image
+                alt={`Icon for ${category}`}
+                src={findImgByCat(category)}
+              />
             </div>
             <div>{category}</div>
           </CardTitle>
