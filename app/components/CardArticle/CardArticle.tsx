@@ -15,6 +15,7 @@ import { Skeleton } from "../ui/skeleton";
 export function CardArticle(p: { article: Article }) {
   const { article } = p;
   const category = article.category[0];
+
   return (
     <Link href={"/articles/title/" + article.title}>
       <Card className="w-80 cursor-pointer hover:bg-slate-50 transition transform hover:scale-105">
