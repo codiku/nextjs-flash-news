@@ -9,7 +9,6 @@ import {
 } from "@/app/components/ui/card";
 import { findImgByCat } from "@/app/lib/images";
 import defaultNews from "@/public/default-news.png";
-import topPng from "@/public/top.png";
 import Image from "next/image";
 import Link from "next/link";
 
