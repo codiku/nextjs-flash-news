@@ -1,3 +1,4 @@
+import { Nav } from "../components/Nav/Nav";
 import "./globals.css";
 
 export default function RootLayout({
@@ -8,7 +9,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="border-red-500 border-2">{children}</div>
+        <Nav />
+        {children}
       </body>
     </html>
   );
