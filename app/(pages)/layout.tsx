@@ -1,4 +1,4 @@
-import { Nav } from "../components/Nav/Nav";
+import { Nav } from "@/app/components/Nav/Nav";
 import "./globals.css";
 
 export default function RootLayout({
