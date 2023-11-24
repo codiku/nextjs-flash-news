@@ -7,6 +7,7 @@ export function Nav() {
     <div>
       {/* Logo */}
       <Image src={logoPng} alt="Logo" className="w-40" />
+
       {/* Nav list */}
       <nav className="space-y-4 mt-4">
         {NAV_ITEMS.map((navItem) => (
