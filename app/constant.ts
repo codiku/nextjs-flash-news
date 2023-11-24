@@ -14,11 +14,8 @@ import technologyPng from "@/public/technology.png";
 import topPng from "@/public/top.png";
 import tourismPng from "@/public/tourism.png";
 import worldPng from "@/public/world.png";
-import { ArticleCategory, CategoryItem } from "@/app/types/articles-type";
 
-export const CATEGORIES_ITEMS: {
-  [category in ArticleCategory]: CategoryItem;
-} = {
+export const CATEGORIES_ITEMS = {
   business: { src: businessPng, alt: "Business logo", category: "business" },
   crime: { src: crimePng, alt: "Crime logo", category: "crime" },
   domestic: { src: domesticPng, alt: "Domestic logo", category: "domestic" },
