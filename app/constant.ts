@@ -14,7 +14,7 @@ import technologyPng from "@/public/technology.png";
 import topPng from "@/public/top.png";
 import tourismPng from "@/public/tourism.png";
 import worldPng from "@/public/world.png";
-import { ArticleCategory, CategoryItem } from "./app/types/article-type";
+import { ArticleCategory, CategoryItem } from "@/app/types/articles-type";
 
 export const CATEGORIES_ITEMS: {
   [category in ArticleCategory]: CategoryItem;
