@@ -9,8 +9,9 @@ export function NavItem(p: { category: string; alt: string; src: StaticImageData
   return (
     <Link
       href={"/articles/category/" + p.category}
-      className={`flex items-center h-12 gap-2 p-3 hover:bg-slate-100 transform transition
-       hover:scale-105 rounded-xl ${isActive && "bg-orange-50"}`}
+      className={`flex items-center h-12 gap-2 p-3 hover:bg-slate-100 
+      transform transition hover:scale-105 rounded-xl 
+      ${isActive && "bg-orange-50"}`}
     >
       <div
         className="flex justify-center items-center
