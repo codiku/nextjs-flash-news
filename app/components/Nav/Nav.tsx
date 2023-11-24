@@ -11,7 +11,7 @@ export function Nav() {
       {/* Nav list */}
       <nav className="space-y-4 mt-4">
         {NAV_ITEMS.map((navItem) => (
-          <NavItem key={navItem.category} {...navItem} />
+          <NavItem {...navItem} />
         ))}
       </nav>
     </div>
