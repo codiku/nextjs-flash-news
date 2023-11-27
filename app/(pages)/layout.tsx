@@ -1,7 +1,11 @@
-import { Nav } from "@/app/components/Nav/Nav";
 import "./globals.css";
+import { Nav } from "@/app/components/Nav/Nav";
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body className="flex p-8">
