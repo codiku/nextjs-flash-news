@@ -7,7 +7,7 @@ export function Nav() {
   return (
     <div>
       {/* Logo */}
-      <Link href={"/"}>
+      <Link href={"/"} prefetch={false}>
         <Image src={logoPng} alt="Logo" className="w-40" />
       </Link>
       {/* Nav list */}
