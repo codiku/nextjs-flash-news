@@ -5,7 +5,7 @@ export class ArticleApi {
     return (
       (await (
         await fetch(
-          "https://newsdata.io/api/1/news?apikey=pub_3280569b014cbfc0b9a13f2b4fd6883c50139&language=en&country=us"
+          `https://newsdata.io/api/1/news?apiKey=${process.env.API_KEY}&language=en&country=us`
         )
       ).json()) as ArticleListResponse
     ).results;
