@@ -1,6 +1,10 @@
 import { ArticleApi } from "@/app/api/article-api";
+import { LatestNews } from "../components/LatestNews/LatestNews";
 
-export default async function IndexPage() {
-  const articles = await ArticleApi.fetchToday();
-  return <div>{JSON.stringify(articles)}</div>;
+export default function IndexPage() {
+  return (
+    <div>
+      <LatestNews />
+    </div>
+  );
 }

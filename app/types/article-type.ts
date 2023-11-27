@@ -19,6 +19,24 @@ export interface Article {
   source_id: string;
   source_priority: number;
   country: string[];
-  category: string[];
+  category: ArticleCategory[];
   language: string;
 }
+
+export type ArticleCategory =
+  | "business"
+  | "crime"
+  | "domestic"
+  | "education"
+  | "entertainment"
+  | "environment"
+  | "food"
+  | "health"
+  | "other"
+  | "politics"
+  | "science"
+  | "sports"
+  | "technology"
+  | "top"
+  | "tourism"
+  | "world";
