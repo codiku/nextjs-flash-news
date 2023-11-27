@@ -1,11 +1,18 @@
 "use client";
+import { ArticleApi } from "@/app/api/article-api";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 
-export function NavItem(p: { category: string; alt: string; src: StaticImageData }) {
+export function NavItem(p: {
+  category: string;
+  alt: string;
+  src: StaticImageData;
+}) {
   const pathname = usePathname();
   const isActive = pathname === "/articles/category/" + p.category;
+
   return (
     <Link
       href={"/articles/category/" + p.category}
