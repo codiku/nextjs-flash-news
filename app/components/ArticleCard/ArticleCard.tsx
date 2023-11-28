@@ -1,46 +1,47 @@
-import { CATEGORIES_ITEMS } from "@/app/constant";
 import { Article } from "@/app/types/article-type";
-import defaultNewsPng from "@/public/default-news.png";
 import Image from "next/image";
 import Link from "next/link";
-
+import defaultNewsPng from "@/public/default-news.png";
+import { CATEGORIES_ITEMS } from "@/app/constant";
 export function ArticleCard(p: { article: Article }) {
-  const { article } = p;
-  const category = article.category[0];
-
   return (
-    <Link href={"#"}>
-      <div className="w-80 cursor-pointer hover:bg-slate-50 transition transform hover:scale-105 border-2 border-gray-100 pt-1 pb-4 px-6 rounded-xl shadow-xs ">
-        <div className="py-4">
-          <div className="text-md capitalize flex items-center gap-2 ">
-            <div className="flex w-10 h-10 justify-center items-center border border-slate-300 rounded-full ">
-              <Image
-                alt={`Icon for ${category}`}
-                height={20}
-                width={20}
-                className="w-5 h-5"
-                src={CATEGORIES_ITEMS[category].src}
-              />
-            </div>
-            <div className="font-bold text-md">{category}</div>
+    <Link
+      href="#"
+      className="space-y-4 block w-80 hover:bg-slate-50 transition transform hover:scale-105 border-2 border-gray-100 py-4 px-6 rounded-xl shadow-sm"
+    >
+      {/* Header */}
+      <div className="capitalize">
+        {/* Icon and category*/}
+        <div className="flex items-center gap-2">
+          <div className="flex w-10 h-10 justify-center items-center border border-slate-300 rounded-full">
+            <Image
+              className="w-5 h-5"
+              src={CATEGORIES_ITEMS[p.article.category[0]].src}
+              alt="Icon for category"
+            />
           </div>
-          <div className="mt-2 text-sm text-gray-400">
-            Published {new Date(article.pubDate).toDateString()}
-          </div>
+          <div className="font-bold text-md">{p.article.category}</div>
         </div>
-        <div className="space-y-2">
-          <div className="font-semibold text-xl line-clamp-2 h-14">
-            {article.title}
-          </div>
-          <Image
-            className="rounded-xl w-full h-40"
-            priority
-            alt={"Image for article"}
-            height={200}
-            width={300}
-            src={article.image_url || defaultNewsPng}
-          />
+        {/* Date */}
+        <div className="mt-2 text-sm text-gray-400">
+          Published : {new Date(p.article.pubDate).toDateString()}
         </div>
+      </div>
+
+      {/* Body*/}
+      <div className="space-y-2">
+        {/* Title*/}
+        <div className="font-semibold text-xl line-clamp-2 h-14">
+          {p.article.title}
+        </div>
+        {/* Article image*/}
+        <Image
+          className="h-40"
+          height={200}
+          width={300}
+          src={p.article.image_url || defaultNewsPng}
+          alt="Image for article"
+        />
       </div>
     </Link>
   );

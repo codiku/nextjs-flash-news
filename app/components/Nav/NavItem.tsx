@@ -1,12 +1,13 @@
 "use client";
 import { ArticleApi } from "@/app/api/article-api";
+import { ArticleCategory } from "@/app/types/article-type";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
 export function NavItem(p: {
-  category: string;
+  category: ArticleCategory;
   alt: string;
   src: StaticImageData;
 }) {

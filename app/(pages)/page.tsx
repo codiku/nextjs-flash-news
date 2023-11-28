@@ -1,5 +1,5 @@
 import { ArticleApi } from "@/app/api/article-api";
-import { LatestNews } from "../components/LatestNews/LatestNews";
+import { LatestNews } from "@/app/components/LatestNews/LatestNews";
 
 export default function IndexPage() {
   return (
