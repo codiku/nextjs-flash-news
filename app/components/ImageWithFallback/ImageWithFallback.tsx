@@ -5,13 +5,13 @@ import { useState } from "react";
 export function ImageWithFallback({
   fallback,
   src,
-  ...imageProps
+  ...p
 }: ImageProps & { fallback: StaticImageData }) {
   const [imgSrc, setImgSrc] = useState(src);
 
   return (
     <Image
-      {...imageProps}
+      {...p}
       src={imgSrc}
       onError={(e) => {
         setImgSrc(fallback.src);

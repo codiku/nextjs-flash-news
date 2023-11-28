@@ -37,7 +37,7 @@ export function ArticleCard(p: { article: Article }) {
         </div>
         {/* Article image*/}
         <ImageWithFallback
-          className="h-40"
+          className="h-40 rounded-lg"
           height={200}
           width={300}
           src={p.article.image_url || defaultNewsPng}
