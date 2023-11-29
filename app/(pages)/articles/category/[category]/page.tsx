@@ -1,18 +1,11 @@
 import { ArticleApi } from "@/app/api/article-api";
 import { ArticleList } from "@/app/components/ArticleList/ArticleList";
-import { NAV_ITEMS } from "@/app/components/Nav/constant";
 import { CATEGORIES_ITEMS } from "@/app/constant";
 import { Article, ArticleCategory } from "@/app/types/article-type";
 import Image from "next/image";
 
-// export const revalidate = 1000
-// export function generateStaticParams() {
-//   return NAV_ITEMS.map((navItem) => {
-//     return {
-//       category: navItem.category,
-//     };
-//   });
-// }
+export const dynamic = "force-dynamic";
+
 export default async function ArticlesByCategoryPage(p: {
   params: { category: ArticleCategory; articles: Article[] };
 }) {

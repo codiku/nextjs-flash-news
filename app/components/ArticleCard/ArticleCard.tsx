@@ -40,6 +40,7 @@ export function ArticleCard(p: { article: Article }) {
           className="h-40 rounded-lg"
           height={200}
           width={300}
+          priority
           src={p.article.image_url || defaultNewsPng}
           alt="Image for article"
           fallback={defaultNewsPng}
