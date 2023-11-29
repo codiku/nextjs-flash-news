@@ -24,7 +24,7 @@ export function ArticleCard(p: { article: Article }) {
           <div className="font-bold text-md">{p.article.category}</div>
         </div>
         {/* Date */}
-        <div className="mt-2 text-sm text-gray-400">
+        <div className="mt-2 text-sm text-gray-600">
           Published : {new Date(p.article.pubDate).toDateString()}
         </div>
       </div>

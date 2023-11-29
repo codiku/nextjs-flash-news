@@ -1,8 +1,17 @@
-import { Nav } from "@/app/components/Nav/Nav";
-import { Inter } from "next/font/google";
 import "./globals.css";
+import { Nav } from "@/app/components/Nav/Nav";
+// import { Inter } from "next/font/google";
+import type { Metadata } from "next";
 
-const inter = Inter({ subsets: ["latin"] });
+export const metadata: Metadata = {
+  title: "Next flash news",
+  description: "Get the last news and live news",
+};
+
+// const inter = Inter({
+//   subsets: ["latin"],
+//   variable: "--font-inter",
+// });
 export default function RootLayout({
   children,
 }: {
@@ -10,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex p-8`}>
+      <body className={`flex p-8`}>
         <Nav />
         <div className="pl-8 mt-16 w-full">{children}</div>
       </body>

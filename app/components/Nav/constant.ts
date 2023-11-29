@@ -1,3 +1,4 @@
+import { ArticleCategory } from "@/app/types/article-type";
 import businessPng from "@/public/business.png";
 import crimePng from "@/public/crime.png";
 import domesticPng from "@/public/domestic.png";
@@ -14,8 +15,9 @@ import technologyPng from "@/public/technology.png";
 import topPng from "@/public/top.png";
 import tourismPng from "@/public/tourism.png";
 import worldPng from "@/public/world.png";
+import { StaticImageData } from "next/image";
 
-export const CATEGORIES_ITEMS = {
+export const CATEGORIES_ITEMS: { [key in ArticleCategory]: CategoryItem } = {
   business: { src: businessPng, alt: "Business logo", category: "business" },
   crime: { src: crimePng, alt: "Crime logo", category: "crime" },
   domestic: { src: domesticPng, alt: "Domestic logo", category: "domestic" },
@@ -56,3 +58,9 @@ export const NAV_ITEMS = [
   CATEGORIES_ITEMS.technology,
   CATEGORIES_ITEMS.world,
 ];
+
+interface CategoryItem {
+  src: StaticImageData;
+  alt: string;
+  category: ArticleCategory;
+}
