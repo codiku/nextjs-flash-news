@@ -25,4 +25,16 @@ export class ArticleApi {
       ).json()) as ArticleListResponse
     ).results;
   }
+
+  static async fetchByTitle(title: string): Promise<Article> {
+    const formatedTitle = decodeURIComponent(title).replace(/:/g, "");
+    console.log("***", formatedTitle);
+    return (
+      (await (
+        await fetch(
+          `${process.env.API_BASE_URL}?apiKey=${process.env.API_KEY}&${DEFAULT_PARAMS}&qInTitle=${formatedTitle}`
+        )
+      ).json()) as ArticleListResponse
+    ).results[0];
+  }
 }
