@@ -9,7 +9,9 @@ export const dynamic = "force-dynamic";
 export default async function ArticlesByCategoryPage(p: {
   params: { category: ArticleCategory; articles: Article[] };
 }) {
-  const articles = await ArticleApi.fetchByCategory(p.params.category);
+  // const articles = await ArticleApi.fetchByCategory(p.params.category);
+  const articles = undefined;
+
   return (
     <div>
       <div className="flex items-center space-x-4 mb-16">
