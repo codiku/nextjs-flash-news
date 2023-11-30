@@ -19,9 +19,7 @@ export default async function ArticlesByCategoryPage(p: {
           className="h-10 w-10"
           alt="Latest news icon"
         />
-        <h1 className="text-4xl font-bold capitalize">
-          {p.params.category} news
-        </h1>
+        <h1>{p.params.category} news</h1>
       </div>
       <ArticleList articles={articles} />
     </div>
