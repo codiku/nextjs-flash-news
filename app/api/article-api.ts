@@ -20,19 +20,19 @@ export class ArticleApi {
     return (
       (await (
         await fetch(
-          `${process.env.API_BASE_URL}?apiKey=${process.env.API_KEY}&${DEFAULT_PARAMS}&category=${category}`
+          `${process.env.API_BASE_URL}?apiKey=${process.env.API_KEY}&${DEFAULT_PARAMS}
+          &category=${category}`
         )
       ).json()) as ArticleListResponse
     ).results;
   }
-
   static async fetchByTitle(title: string): Promise<Article> {
-    const formatedTitle = decodeURIComponent(title).replace(/:/g, "");
-    console.log("***", formatedTitle);
+    const formatedTitle = title.replace("/:/g", "");
     return (
       (await (
         await fetch(
-          `${process.env.API_BASE_URL}?apiKey=${process.env.API_KEY}&${DEFAULT_PARAMS}&qInTitle=${formatedTitle}`
+          `${process.env.API_BASE_URL}?apiKey=${process.env.API_KEY}&${DEFAULT_PARAMS}
+          &qInTitle=${formatedTitle}`
         )
       ).json()) as ArticleListResponse
     ).results[0];

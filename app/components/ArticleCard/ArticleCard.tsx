@@ -8,7 +8,7 @@ export function ArticleCard(p: { article: Article }) {
   return (
     <Link
       href={`/articles/title/${p.article.title}`}
-      className=" space-y-4 block w-80 hover:bg-slate-50 transition transform hover:scale-105 border-2 border-gray-100 py-4 px-6 rounded-xl shadow-sm"
+      className="space-y-4 block w-80 hover:bg-slate-50 transition transform hover:scale-105 border-2 border-gray-100 py-4 px-6 rounded-xl shadow-sm"
     >
       {/* Header */}
       <div className="capitalize">
