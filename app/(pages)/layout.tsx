@@ -16,11 +16,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={` ${inter.className} flex p-8`}>
-        <Nav />
-        <div className="pl-8 mt-16 w-full">{children}</div>
-      </body>
-    </html>
+    <div className="flex p-8">
+      <Nav />
+      <div className="mt-16 pl-8 w-full">{children}</div>
+    </div>
   );
 }

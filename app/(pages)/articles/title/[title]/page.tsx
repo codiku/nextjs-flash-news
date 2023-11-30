@@ -55,10 +55,12 @@ export default async function ArticleDetailPage(p: {
   );
 
   return (
-    <div className="space-y-6">
-      {header}
-      {body}
-      {footer}
+    <div className="flex justify-center items-center ">
+      <div className="prose space-y-6 max-w-6xl">
+        {header}
+        {body}
+        {footer}
+      </div>
     </div>
   );
 }
