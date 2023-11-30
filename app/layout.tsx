@@ -1,5 +1,4 @@
 import "./globals.css";
-import { Nav } from "@/app/components/Nav/Nav";
 import { Inter } from "next/font/google";
 import { Metadata } from "next";
 const inter = Inter({
