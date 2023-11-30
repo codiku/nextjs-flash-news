@@ -7,7 +7,7 @@ export default function RootLayout({
   return (
     <div className="flex p-8">
       <Nav />
-      <div className="mt-16 pl-8">{children}</div>
+      <div className="mt-16 pl-8 w-full">{children}</div>
     </div>
   );
 }
