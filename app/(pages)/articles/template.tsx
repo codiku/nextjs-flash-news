@@ -7,8 +7,6 @@ export default function PagesTemplate({
 }: {
   children: React.ReactNode;
 }) {
-  const [rating, setRating] = useState("");
-
   const sendRating = () => {
     alert("Rating submited ! Thanks ");
   };
@@ -18,12 +16,7 @@ export default function PagesTemplate({
       <div className="fixed bottom-10 right-10">
         Rate this page
         <div className="flex space-x-2">
-          <input
-            className="block border border-slate-200 w-10"
-            type="number"
-            value={rating}
-            onChange={(e) => setRating(e.currentTarget.value)}
-          />
+          <input className="block border border-slate-200 w-10" type="number" />
           <button
             onClick={sendRating}
             className="text-xs bg-yellow-500 text-white rounded-lg p-2"
