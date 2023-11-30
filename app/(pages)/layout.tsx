@@ -1,5 +1,7 @@
+"use client";
 import { Nav } from "@/app/components/Nav/Nav";
-export default function RootLayout({
+import { useEffect, useState } from "react";
+export default function PagesLayout({
   children,
 }: {
   children: React.ReactNode;
