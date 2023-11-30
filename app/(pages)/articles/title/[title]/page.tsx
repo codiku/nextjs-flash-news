@@ -55,12 +55,10 @@ export default async function ArticleDetailPage(p: {
   );
 
   return (
-    <div className=" flex flex-col items-center">
-      <div className="prose max-w-6xl space-y-6">
-        {header}
-        {body}
-        {footer}
-      </div>
+    <div className="space-y-6">
+      {header}
+      {body}
+      {footer}
     </div>
   );
 }
