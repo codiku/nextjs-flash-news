@@ -8,7 +8,7 @@ export function Nav() {
     <div>
       {/* Logo */}
       <Link href={"/"}>
-        <Image src={logoPng} alt="Logo" className="w-40" />
+        <Image src={logoPng} alt="Logo" className="w-40" quality={30} />
       </Link>
       {/* Nav list */}
       <nav className="space-y-4 mt-4">

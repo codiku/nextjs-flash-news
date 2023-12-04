@@ -4,7 +4,11 @@ import {
   FAKE_LATEST_ARTICLES,
   delayResponse,
 } from "../lib/mock";
-import { Article, ArticleCategory } from "../types/article-type";
+import {
+  Article,
+  ArticleCategory,
+  ArticleListResponse,
+} from "../types/article-type";
 
 const DEFAULT_PARAMS = "language=en&country=us";
 
