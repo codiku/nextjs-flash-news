@@ -13,7 +13,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  console.log("render layout");
   return (
     <html lang="en">
       <body className={`${inter.className}`}>{children}</body>
