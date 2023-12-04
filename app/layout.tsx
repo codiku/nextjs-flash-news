@@ -1,4 +1,5 @@
 import "./globals.css";
+import "react-loading-skeleton/dist/skeleton.css";
 import { Inter } from "next/font/google";
 import { Metadata } from "next";
 const inter = Inter({

@@ -1,5 +1,12 @@
-import { Article, ArticleListResponse } from "@/app/types/article-type";
+import { Article } from "@/app/types/article-type";
 
+export function delayResponse<T>(response: T, duration = 1000): Promise<T> {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(response);
+    }, duration);
+  });
+}
 export const FAKE_LATEST_ARTICLES: Article[] = [
   {
     article_id: "6723ec4367b09fbbff0af34dba7d4ae6",
