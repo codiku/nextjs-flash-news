@@ -2,6 +2,7 @@ import {
   FAKE_ALL_ARTICLES,
   FAKE_ARTICLE_BY_CATEGORIES,
   FAKE_LATEST_ARTICLES,
+  delayResponse,
 } from "../lib/mock";
 import { Article, ArticleCategory } from "../types/article-type";
 
@@ -16,7 +17,7 @@ export class ArticleApi {
     //     )
     //   ).json()) as ArticleListResponse
     // ).results;
-    return FAKE_LATEST_ARTICLES;
+    return delayResponse(FAKE_LATEST_ARTICLES, 1000);
   }
   static async fetchByCategory(category: ArticleCategory): Promise<Article[]> {
     // return (

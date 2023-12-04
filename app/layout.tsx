@@ -1,4 +1,6 @@
 import "./globals.css";
+import "react-loading-skeleton/dist/skeleton.css";
+
 import { Inter } from "next/font/google";
 import { Metadata } from "next";
 const inter = Inter({
@@ -13,7 +15,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  console.log("render layout");
   return (
     <html lang="en">
       <body className={`${inter.className}`}>{children}</body>

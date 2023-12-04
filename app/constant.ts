@@ -52,3 +52,8 @@ export const CATEGORIES_ITEMS = {
   tourism: { src: tourismPng, alt: "Tourism logo", category: "tourism" },
   world: { src: worldPng, alt: "World logo", category: "world" },
 };
+
+export const CRYPTOS = [
+  { emoji: "₿", label: " Bitcoin", symbol: "BTCUSDT" },
+  { emoji: "💎", label: " Ethereum", symbol: "ETHUSDT" },
+];
