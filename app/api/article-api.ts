@@ -17,7 +17,7 @@ export class ArticleApi {
     //     )
     //   ).json()) as ArticleListResponse
     // ).results;
-    return delayResponse(FAKE_LATEST_ARTICLES, 2000);
+    return FAKE_LATEST_ARTICLES;
   }
   static async fetchByCategory(category: ArticleCategory): Promise<Article[]> {
     // return (

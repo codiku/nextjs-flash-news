@@ -4,6 +4,6 @@ export class CryptoApi {
     const cryptoResp: CryptoResponse = await (
       await fetch(`${process.env.NEXT_PUBLIC_CRYPO_BASE_URL}/assets/bitcoin`)
     ).json();
-    return delayResponse(cryptoResp.data, 4000);
+    return cryptoResp.data;
   }
 }
