@@ -55,3 +55,10 @@ export const CATEGORIES_ITEMS: {
   tourism: { src: tourismPng, alt: "Tourism logo", category: "tourism" },
   world: { src: worldPng, alt: "World logo", category: "world" },
 };
+
+export const NAV_ITEMS = [
+  CATEGORIES_ITEMS.business,
+  CATEGORIES_ITEMS.environment,
+  CATEGORIES_ITEMS.technology,
+  CATEGORIES_ITEMS.world,
+];
