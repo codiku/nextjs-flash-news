@@ -37,7 +37,7 @@ export function ArticleCard(p: { article: Article }) {
         </div>
         {/* Article image*/}
         <ImageWithFallback
-          className="h-40 rounded-lg"
+          className="rounded-lg"
           height={200}
           width={300}
           priority
