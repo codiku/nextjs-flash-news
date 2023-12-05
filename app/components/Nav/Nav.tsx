@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { NAV_ITEMS } from "./constant";
+import { NAV_ITEMS } from "@/app/constant";
 import logoPng from "@/public/logo.png";
 import { NavItem } from "./NavItem";
 export function Nav() {
