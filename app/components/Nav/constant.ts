@@ -19,44 +19,32 @@ import { StaticImageData } from "next/image";
 
 export const CATEGORIES_ITEMS: { [key in ArticleCategory]: CategoryItem } = {
   business: { src: businessPng, alt: "Business logo", category: "business" },
-  crime: { src: crimePng, alt: "Crime logo", category: "crime" },
-  domestic: { src: domesticPng, alt: "Domestic logo", category: "domestic" },
-  education: {
-    src: educationPng,
-    alt: "Education logo",
-    category: "education",
-  },
+
   entertainment: {
     src: entertainmentPng,
     alt: "Entertainment logo",
     category: "entertainment",
   },
-  environment: {
-    src: environmentPng,
-    alt: "Environment logo",
-    category: "environment",
+  general: {
+    src: worldPng,
+    alt: "General logo",
+    category: "general",
   },
-  food: { src: foodPng, alt: "Food logo", category: "food" },
   health: { src: healthPng, alt: "Health logo", category: "health" },
-  other: { src: otherPng, alt: "Other logo", category: "other" },
   science: { src: sciencePng, alt: "Science logo", category: "science" },
   sports: { src: sportsPng, alt: "Sport logo", category: "sports" },
-  politics: { src: politicsPng, alt: "Politics logo", category: "politics" },
   technology: {
     src: technologyPng,
     alt: "Technology logo",
     category: "technology",
   },
-  top: { src: topPng, alt: "Top logo", category: "top" },
-  tourism: { src: tourismPng, alt: "Tourism logo", category: "tourism" },
-  world: { src: worldPng, alt: "World logo", category: "world" },
 };
 
 export const NAV_ITEMS = [
   CATEGORIES_ITEMS.business,
-  CATEGORIES_ITEMS.environment,
+  CATEGORIES_ITEMS.general,
   CATEGORIES_ITEMS.technology,
-  CATEGORIES_ITEMS.world,
+  CATEGORIES_ITEMS.science,
 ];
 
 interface CategoryItem {

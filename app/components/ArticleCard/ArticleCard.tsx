@@ -9,25 +9,28 @@ export function ArticleCard(p: { article: Article }) {
   return (
     <Link
       href={`/articles/title/${p.article.title}`}
+      // href="#"
       className="space-y-4 block w-80 hover:bg-slate-50 transition transform hover:scale-105 border-2 border-gray-100 py-4 px-6 rounded-xl shadow-sm"
     >
       {/* Header */}
       <div className="capitalize">
         {/* Icon and category*/}
         <div className="flex items-center gap-2">
-          <div className="flex w-10 h-10 justify-center items-center border border-slate-300 rounded-full">
+          {/*<div className="flex w-10 h-10 justify-center items-center border border-slate-300 rounded-full">
             <Image
               className="w-5 h-5"
               src={CATEGORIES_ITEMS[p.article.category[0]].src}
               alt="Icon for category"
             />
-          </div>
-          <div className="font-bold text-md">{p.article.category}</div>
+  </div>*/}
+          <div className="font-bold text-md">{p.article.source.name}</div>
         </div>
         {/* Date */}
-        <div className="mt-2 text-sm text-gray-600">
-          Published : {new Date(p.article.pubDate).toDateString()}
-        </div>
+        {p.article.publishedAt && (
+          <div className="mt-2 text-sm text-gray-600">
+            Published : {new Date(p.article.publishedAt).toDateString()}
+          </div>
+        )}
       </div>
 
       {/* Body*/}
@@ -43,7 +46,7 @@ export function ArticleCard(p: { article: Article }) {
           priority={true}
           fetchPriority="high"
           quality={30}
-          src={p.article.image_url || defaultNewsPng}
+          src={p.article.urlToImage || defaultNewsPng}
           fallback={defaultNewsPng}
           alt="Image for article"
         />

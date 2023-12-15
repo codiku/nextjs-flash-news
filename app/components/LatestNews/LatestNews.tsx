@@ -4,7 +4,7 @@ import { ArticleList } from "../ArticleList/ArticleList";
 import topPng from "@/public/top.png";
 import Image from "next/image";
 import Skeleton from "react-loading-skeleton";
-export async function LatestNews(p: {}) {
+export async function LatestNews() {
   const articles = await ArticleApi.fetchToday();
   return (
     <div>

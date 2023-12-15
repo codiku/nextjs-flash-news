@@ -1,42 +1,30 @@
 export interface ArticleListResponse {
   status: string;
   totalResults: number;
-  results: Article[];
-  nextPage: string;
-}
-
-export interface Article {
-  article_id: string;
-  title: string;
-  link: string;
-  keywords?: string[] | null;
-  creator?: string[] | null;
-  video_url: any;
-  description: string;
-  content: string;
-  pubDate: string;
-  image_url?: string | null;
-  source_id: string;
-  source_priority: number;
-  country: string[];
-  category: ArticleCategory[];
-  language: string;
+  articles: Article[];
 }
 
 export type ArticleCategory =
   | "business"
-  | "crime"
-  | "domestic"
-  | "education"
   | "entertainment"
-  | "environment"
-  | "food"
+  | "general"
   | "health"
-  | "other"
-  | "politics"
   | "science"
   | "sports"
-  | "technology"
-  | "top"
-  | "tourism"
-  | "world";
+  | "technology";
+
+interface ArticleSource {
+  id: string | null;
+  name: string | null;
+}
+
+export interface Article {
+  source: ArticleSource;
+  author: string | null;
+  title: string | null;
+  description: string | null;
+  url: string;
+  urlToImage: string | null;
+  publishedAt: string;
+  content: string | null;
+}

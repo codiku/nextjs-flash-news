@@ -7,7 +7,6 @@ import {
   CryptoNewsSkel,
 } from "../components/CryptoNews/CryptoNews.server";
 import { Suspense } from "react";
-import Skeleton from "react-loading-skeleton";
 
 export default function IndexPage() {
   return (

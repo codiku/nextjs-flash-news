@@ -1,7 +1,7 @@
 import { CryptoApi } from "@/app/api/crypto-api";
 import { CryptoNews as CryptoNewsClient } from "./CryptoNews.client";
 import Skeleton from "react-loading-skeleton";
-export async function CryptoNews(p: {}) {
+export async function CryptoNews() {
   const crypto = await CryptoApi.fetchBitcoin();
   return <CryptoNewsClient initialData={crypto} />;
 }
