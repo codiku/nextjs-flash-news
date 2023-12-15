@@ -17,14 +17,17 @@ export class ArticleApi {
     ).results;
   }
   static async fetchByCategory(category: ArticleCategory): Promise<Article[]> {
-    return (
+    const d = (
       (await (
         await fetch(
-          `${process.env.API_BASE_URL}?apiKey=${process.env.API_KEY}&${DEFAULT_PARAMS}
-         &category=${category}`
+          `${process.env.API_BASE_URL}?category=${category}&apiKey=${process.env.API_KEY}&${DEFAULT_PARAMS}`
         )
       ).json()) as ArticleListResponse
     ).results;
+    console.log(
+      `${process.env.API_BASE_URL}?category=${category}&apiKey=${process.env.API_KEY}&${DEFAULT_PARAMS}`
+    );
+    return d;
   }
   static async fetchByTitle(title: string): Promise<Article> {
     const formatedTitle = title.replace("/:/g", "");
