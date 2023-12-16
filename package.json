@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "fake-server": "json-server --watch db.json --routes routes.json --port 3090"
+    "fake-server": "json-server --watch ./fake-server/db.json --routes ./fake-server/routes.json --port 3090"
   },
   "dependencies": {
     "express": "^4.18.2",

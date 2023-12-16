@@ -1,4 +1,3 @@
-import { delayResponse } from "@/app/lib/mock";
 export class CryptoApi {
   static async fetchBitcoin(): Promise<CryptoItem> {
     const cryptoResp: CryptoResponse = await (
