@@ -21,11 +21,9 @@ export class ArticleApi {
   }
   static async fetchByTitle(title: string): Promise<Article> {
     return (
-      (
-        await (
-          await fetch(`${process.env.API_BASE_URL}?qInTitle=${title}`)
-        ).json()
-      )[0] as ArticleListResponse
+      (await (
+        await fetch(`${process.env.API_BASE_URL}?qInTitle=${title}`)
+      ).json()) as ArticleListResponse
     ).results[0];
   }
 }
