@@ -1,0 +1,5 @@
+{
+  "/news": "/news",
+  "/news?category=:category": "/:category",
+  "/news?qInTitle=:qInTitle": "/:qInTitle"
+}
