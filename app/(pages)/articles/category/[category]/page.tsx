@@ -7,7 +7,7 @@ import Image from "next/image";
 export const dynamic = "force-dynamic";
 
 export default async function ArticlesByCategoryPage(p: {
-  params: { category: ArticleCategory; articles: Article[] };
+  params: { category: ArticleCategory };
 }) {
   // const articles = await ArticleApi.fetchByCategory(p.params.category);
   const articles = undefined;
