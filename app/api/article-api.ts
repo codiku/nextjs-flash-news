@@ -4,16 +4,9 @@ import {
   ArticleCategory,
   ArticleListResponse,
 } from "../types/article-type";
-import { headers } from "next/headers";
-const headersList = headers();
 
 export class ArticleApi {
   static async fetchToday(): Promise<Article[]> {
-    // const host = headersList.get("host"); // to get domain
-    // const url = headersList.get("next-url"); // to get url
-    // console.log(host, " and ", url);
-    // const reqUrl = headersList.get("referer");
-    // console.log("he rereqUrl);
     return delayResponse(
       (
         (await (
