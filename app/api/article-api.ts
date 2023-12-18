@@ -26,7 +26,7 @@ export class ArticleApi {
   static async fetchByCategory(category: ArticleCategory): Promise<Article[]> {
     return (
       (await (
-        await fetch(`${process.env.API_BASE_URL}?category=${category}`)
+        await fetch(`${process.env.API_BASE_URL}/api/news?category=${category}`)
       ).json()) as ArticleListResponse
     ).results;
   }
@@ -34,7 +34,9 @@ export class ArticleApi {
     const formatedTitle = title.replace("/:/g", "");
     return (
       (await (
-        await fetch(`${process.env.API_BASE_URL}?qInTitle=${formatedTitle}`)
+        await fetch(
+          `${process.env.API_BASE_URL}/api/news?qInTitle=${formatedTitle}`
+        )
       ).json()) as ArticleListResponse
     ).results[0];
   }
