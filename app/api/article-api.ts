@@ -10,7 +10,7 @@ export class ArticleApi {
     return delayResponse(
       (
         (await (
-          await fetch(`${process.env.API_BASE_URL}/api/news`)
+          await fetch(`${process.env.API_BASE_URL}`)
         ).json()) as ArticleListResponse
       ).results,
       2000
@@ -19,7 +19,7 @@ export class ArticleApi {
   static async fetchByCategory(category: ArticleCategory): Promise<Article[]> {
     return (
       (await (
-        await fetch(`${process.env.API_BASE_URL}/api/news?category=${category}`)
+        await fetch(`${process.env.API_BASE_URL}?category=${category}`)
       ).json()) as ArticleListResponse
     ).results;
   }
@@ -27,9 +27,7 @@ export class ArticleApi {
     const formatedTitle = title.replace("/:/g", "");
     return (
       (await (
-        await fetch(
-          `${process.env.API_BASE_URL}/api/news?qInTitle=${formatedTitle}`
-        )
+        await fetch(`${process.env.API_BASE_URL}?qInTitle=${formatedTitle}`)
       ).json()) as ArticleListResponse
     ).results[0];
   }
