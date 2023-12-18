@@ -14,7 +14,7 @@ export function generateStaticParams() {
   });
 }
 export default async function ArticlesByCategoryPage(p: {
-  params: { category: ArticleCategory; articles: Article[] };
+  params: { category: ArticleCategory };
 }) {
   const articles = await ArticleApi.fetchByCategory(p.params.category);
   return (
