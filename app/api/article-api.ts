@@ -7,6 +7,7 @@ import {
 
 export class ArticleApi {
   static async fetchToday(): Promise<Article[]> {
+    console.log("*** nxus", `${process.env.API_BASE_URL}`);
     return delayResponse(
       (
         (await (
