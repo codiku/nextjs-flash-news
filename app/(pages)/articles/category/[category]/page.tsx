@@ -9,8 +9,8 @@ export const dynamic = "force-dynamic";
 export default async function ArticlesByCategoryPage(p: {
   params: { category: ArticleCategory };
 }) {
-  // const articles = await ArticleApi.fetchByCategory(p.params.category);
-  const articles = undefined;
+  const articles = await ArticleApi.fetchByCategory(p.params.category);
+  // const articles = undefined;
 
   return (
     <div>
