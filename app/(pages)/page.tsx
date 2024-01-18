@@ -1,30 +1,22 @@
-import { ArticleApi } from "@/app/api/article-api";
-
+export const revalidate = 10;
 export default async function IndexPage() {
-  // const articles = await ArticleApi.fetchToday();
-
   const fetch1 = await (
-    await fetch("http://api.open-notify.org/iss-now.json", {
-      next: { revalidate: 5 },
-    })
+    await fetch("http://api.open-notify.org/iss-now.json", {})
   ).json();
 
   const fetch2 = await (
-    await fetch("https://api.chucknorris.io/jokes/random", {
-      next: { revalidate: 10 },
-    })
+    await fetch("https://api.chucknorris.io/jokes/random", {})
   ).json();
 
-  http: return (
+  return (
     <div>
-      {Math.random()}
+      {new Date().toLocaleTimeString()}
       <br />
       <br />
       <br /> {JSON.stringify(fetch1)}
       <br />
       <br />
       <br /> {JSON.stringify(fetch2)}
-      {/* <br />- {JSON.stringify(articles)} */}
     </div>
   );
 }
